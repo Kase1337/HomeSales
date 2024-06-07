@@ -6,7 +6,6 @@ class Program {
     {
          bool tie = false;
         string initial; // Initialize initials array for each salesperson
-        
         double[] salestotals = new double[3]; // 3 salespersons
         double saleamount; // Amount of sale
         double grandtotal = 0; // Initialize grand total variable
@@ -71,14 +70,15 @@ class Program {
         // Print out highest salesperson or indicate that there is a tie and no highest salesperson can be named.
         if (tie)
         {
-            Console.WriteLine("Highest Sale: Unknown (TIE)");
+            Console.WriteLine("Highest Sale: Unknown (TIE)"); // Print out highest salesperson or indicate that there is a tie and no highest salesperson can be named.
         }
         
         else
          {
-        // Print out highest salesperson
-        string highestSalesPerson = highestsaleIndex == -1 ? "None" : "DEF"[highestsaleIndex].ToString();
-            Console.WriteLine("Highest Sale: " + highestSalesPerson);
+      
+        string highestSalesPerson = highestsaleIndex == -1 ? "None" : "DEF"[highestsaleIndex].ToString(); // Convert highestsaleIndex to string
+            Console.WriteLine("Highest Sale: " + highestSalesPerson); // Print out highest salesperson
+    
     }
  }
 }
