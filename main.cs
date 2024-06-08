@@ -6,12 +6,15 @@ class Program {
     {
          bool tie = false;
         string initial; // Initialize initials array for each salesperson
-        double[] salestotals = new double[3]; // 3 salespersons
+       double[] salestotals = new double[3]; // 3 salespersons
         double saleamount; // Amount of sale
         double grandtotal = 0; // Initialize grand total variable
+        string[] salesPersons = { "Danielle", "Edward", "Francis" }; // Initialize salespersons array
+        char[] initials = { 'D', 'E', 'F' };
         int salespersonIndex;  // Initialize sales person index 0 - 2; 
         int highestsaleIndex = -1; // Initialize to -1 to indicate that there is no salesperson has the current highest sale
 
+       
         
        while (true) // Loop until user chooses to exit
          {
@@ -21,18 +24,27 @@ class Program {
             if (initial == "Z")
                 break;
 
-            
-            if (initial == "D")
-                salespersonIndex = 0;
-            else if (initial == "E")
-                salespersonIndex = 1;
-            else if (initial == "F")
-                salespersonIndex = 2;
-            else
+
+         salespersonIndex = Array.IndexOf(initials, initial[0]); // Find the index of the initial in the initials array
+             
+/*           if (initial == "D")
+                 salespersonIndex = 0;
+             else if (initial == "E")
+                 salespersonIndex = 1;
+             else if (initial == "F")
+                 salespersonIndex = 2;
+             else
+             {
+                 Console.WriteLine("Error, invalid salesperson selected, please try again");
+                 continue; // Skip to next iteration of loop
+              }*/
+             
+             
+            if (salespersonIndex == -1)
             {
                 Console.WriteLine("Error, invalid salesperson selected, please try again");
                 continue; // Skip to next iteration of loop
-             }
+            }
 
             Console.Write("sale: "); // Prompt for sale amount
 
